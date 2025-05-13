@@ -1,0 +1,26 @@
+# yaml-language-server: $schema=https://sap.github.io/ui5-tooling/schema/ui5.yaml.json
+
+specVersion: "3.1"
+metadata:
+  name: zcomcs
+type: application
+builder:
+  resources:
+    excludes:
+      - /test/**
+      - /localService/**
+  customTasks:
+    - name: deploy-to-abap
+      afterTask: generateCachebusterInfo
+      configuration:
+        target:
+          destination: WMC_DEV_SAML
+          url: https://my422699.s4hana.cloud.sap
+          client: '080'
+        app:
+          name: ZCO_MFGCOST
+          description: 제조원가명세서
+          package: Z_CO_MFGCOST2
+          transport: POYK900192
+        exclude:
+          - /test/
