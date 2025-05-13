@@ -14,9 +14,8 @@ builder:
       afterTask: generateCachebusterInfo
       configuration:
         target:
-          destination: WMC_DEV_SAML
-          url: https://my422699.s4hana.cloud.sap
-          client: '080'
+          destination: ZAM_DEV_SAML_ASSERTION
+          url: https://my407000.s4hana.cloud.sap
         app:
           name: ZCO_MFGCOST
           description: 제조원가명세서
